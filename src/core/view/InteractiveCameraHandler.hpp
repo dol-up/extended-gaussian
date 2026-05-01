@@ -206,6 +206,9 @@ namespace sibr {
 
 		float getInterpolatedHeight(const std::vector<InputCamera::Ptr>& inputCameras);
 
+	protected:
+		sibr::FPSCamera _fpsCamera;///< FPS handler.
+
 	private:
 
 		int _currentCamId; ///< Current snapped camera ID.
@@ -216,7 +219,6 @@ namespace sibr {
 
 		float _bottom_vp = 1.f;
 
-		sibr::FPSCamera _fpsCamera; ///< FPS handler.
 		sibr::Orbit _orbit; ///< Orbit handler.
 		sibr::TrackBall _trackball; ///< Trackball handler.
 
